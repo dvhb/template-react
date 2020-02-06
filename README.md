@@ -2,16 +2,16 @@
 
 This is the official TypeScript template for [Create React App](https://github.com/facebook/create-react-app).
 
-To use this template, add `--template @dvhb/template-react` when creating a new app.
+To use this template, add `--template dvhb` when creating a new app.
 
 For example:
 
 ```sh
-npx create-react-app my-app --template @dvhb/template-react
+npx create-react-app my-app --template dvhb
 
 # or
 
-yarn create react-app my-app --template @dvhb/template-react
+yarn create react-app my-app --template dvhb
 ```
 
 For more information, please refer to:
