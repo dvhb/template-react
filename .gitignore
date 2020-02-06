@@ -8,3 +8,9 @@ local.properties
 # node.js
 node_modules/
 npm-debug.log
+
+template/build
+template/package.json
+template/package-lock.json
+template/tsconfig.json
+template/src/react-app-env.d.ts

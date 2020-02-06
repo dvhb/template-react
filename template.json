@@ -1,6 +1,13 @@
 {
+  "scripts": {
+    "build": "craco build",
+    "eject": "react-scripts eject",
+    "start": "craco start --verbose",
+    "test": "craco test"
+  },
   "package": {
     "dependencies": {
+      "@craco/craco": "^5.6.2",
       "@testing-library/react": "^9.3.2",
       "@testing-library/jest-dom": "^4.2.4",
       "@testing-library/user-event": "^7.1.2",
