@@ -1,6 +1,7 @@
 {
   "name": "cra-template-dvhb",
   "version": "1.0.0",
+  "description": "The base template for dvhb web app.",
   "keywords": [
     "react",
     "create-react-app",
@@ -8,21 +9,29 @@
     "typescript",
     "craco"
   ],
-  "description": "The base template for dvhb web app.",
-  "main": "template.json",
+  "bugs": {
+    "url": "https://github.com/dvhb/template-react/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/dvhb/template-react.git"
   },
   "license": "MIT",
-  "engines": {
-    "node": ">=8.10"
-  },
-  "bugs": {
-    "url": "https://github.com/dvhb/template-react/issues"
-  },
+  "author": "dvhb team <team@dvhb.ru>",
+  "main": "template.json",
   "files": [
     "template",
     "template.json"
-  ]
+  ],
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "@semantic-release/changelog": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "husky": "^4.0.10",
+    "semantic-release": "^17.0.0"
+  }
 }
