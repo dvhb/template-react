@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/dvhb/template-react/compare/v1.4.1...v1.4.2) (2020-02-07)
+
+
+### Bug Fixes
+
+* set up components/pages folders ([1b8667b](https://github.com/dvhb/template-react/commit/1b8667b8644279436f3584f3675a1ed9bd04d3ce))
+
 ## [1.4.1](https://github.com/dvhb/template-react/compare/v1.4.0...v1.4.1) (2020-02-07)
 
 
