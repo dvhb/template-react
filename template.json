@@ -5,8 +5,14 @@
     "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
     "start": "craco start --verbose",
     "storybook": "start-storybook -p 9009 -s public",
-    "storybook:build": "build-storybook -s public",
+    "storybook:build": "build-storybook -o build/storybook -s public",
     "test": "craco test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && tsc --noEmit",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "package": {
     "dependencies": {
@@ -29,7 +35,11 @@
       "node-sass": "^4.13.1",
       "prettier": "^1.19.1",
       "tslint": "^6.0.0",
-      "typescript": "~3.7.2"
+      "typescript": "~3.7.2",
+      "husky": "^4.2.1",
+      "lint-staged": "^10.0.7",
+      "@commitlint/cli": "^8.1.0",
+      "@commitlint/config-conventional": "^8.1.0"
     }
   }
 }
