@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/dvhb/template-react/compare/v1.4.2...v1.4.3) (2020-02-07)
+
+
+### Bug Fixes
+
+* tsc errors in travis ([fecf546](https://github.com/dvhb/template-react/commit/fecf5463544a7fb7ba6d100db424532428aff244))
+
 ## [1.4.2](https://github.com/dvhb/template-react/compare/v1.4.1...v1.4.2) (2020-02-07)
 
 
