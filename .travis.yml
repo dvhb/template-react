@@ -1,4 +1,18 @@
-import:
-  - .travis/node.yml
-  - .travis/node-versions.yml
-  - .travis/semantic-release.yml
+language: node_js
+
+node_js:
+  - '12'
+
+branches:
+  except:
+    - /^v[0-9]/
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - npm run test
+    - stage: release
+      node_js: lts/*
+      script:
+        - npm run semantic-release
