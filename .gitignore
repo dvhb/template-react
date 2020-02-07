@@ -11,5 +11,4 @@ npm-debug.log
 
 template/.env
 template/build
-template/tsconfig.json
 template/src/react-app-env.d.ts
