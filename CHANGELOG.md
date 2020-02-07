@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/dvhb/template-react/compare/v1.3.0...v1.4.0) (2020-02-07)
+
+
+### Features
+
+* test project create with included package in template ([afff959](https://github.com/dvhb/template-react/commit/afff9592607645467067219d72b9bb42456fcb6a))
+
 # [1.3.0](https://github.com/dvhb/template-react/compare/v1.2.0...v1.3.0) (2020-02-07)
 
 
