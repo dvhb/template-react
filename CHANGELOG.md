@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/dvhb/template-react/compare/v1.4.0...v1.4.1) (2020-02-07)
+
+
+### Bug Fixes
+
+* remove package.json from release npm template ([9b686d2](https://github.com/dvhb/template-react/commit/9b686d2b24485226542408a4863f3718fa3cfc6a))
+
 # [1.4.0](https://github.com/dvhb/template-react/compare/v1.3.0...v1.4.0) (2020-02-07)
 
 
