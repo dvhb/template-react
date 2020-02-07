@@ -1,0 +1,62 @@
+{
+  "name": "dvhb-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "craco build",
+    "eject": "react-scripts eject",
+    "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
+    "start": "craco start --verbose",
+    "storybook": "start-storybook -p 9009 -s public",
+    "storybook:build": "build-storybook -s public",
+    "test": "craco test",
+    "tsc": "tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && tsc --noEmit"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "dependencies": {
+    "@craco/craco": "^5.6.2",
+    "@dvhb/tslint-config-react": "^1.0.9",
+    "@storybook/addon-actions": "^5.3.12",
+    "@storybook/addon-links": "^5.3.12",
+    "@storybook/addons": "^5.3.12",
+    "@storybook/preset-create-react-app": "^1.5.2",
+    "@storybook/react": "^5.3.12",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/classnames": "^2.2.9",
+    "@types/jest": "^24.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.0",
+    "@types/react-dom": "^16.9.0",
+    "classnames": "^2.2.6",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "node-sass": "^4.13.1",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.1",
+    "tslint": "^6.0.0",
+    "typescript": "~3.7.2"
+  }
+}
