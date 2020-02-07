@@ -8,5 +8,5 @@
 
 - craco `5.6.2`
 - react `16.12.0`
-- typeScript `3.7.2`
+- typescript `3.7.2`
 - storybook `5.3.12`
