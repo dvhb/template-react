@@ -12,4 +12,4 @@ jobs:
       install:
         - travis_retry npm install
       script:
-        - npx semantic-release
+        - npm run semantic-release
