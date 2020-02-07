@@ -24,14 +24,25 @@
     "template.json"
   ],
   "scripts": {
-    "lint": "cd template && npm run tsc && npm run lint",
+    "test": "cd template && npm ci && npm run tsc && npm run lint && cp .env.example .env && npm run build ",
+    "presemantic-release": "cd template && rm -rf package.json package-lock.json",
     "semantic-release": "semantic-release"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint",
+      "pre-commit": "lint-staged",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.{json,md,graphql}": [
+      "cd template && prettier --write",
+      "git add --force"
+    ],
+    "*.{ts,tsx}": [
+      "cd template && tslint --fix",
+      "git add --force"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
@@ -39,6 +50,7 @@
     "@semantic-release/changelog": "^5.0.0",
     "@semantic-release/git": "^9.0.0",
     "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
     "semantic-release": "^17.0.0"
   },
   "release": {
