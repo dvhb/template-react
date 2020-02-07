@@ -9,6 +9,7 @@ local.properties
 node_modules/
 npm-debug.log
 
+template/.env
 template/build
 template/package.json
 template/package-lock.json
