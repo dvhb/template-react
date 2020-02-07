@@ -11,4 +11,3 @@ npm-debug.log
 
 template/.env
 template/build
-template/src/react-app-env.d.ts
