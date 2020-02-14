@@ -59,11 +59,6 @@
       "@semantic-release/github",
       "@semantic-release/npm",
       "@semantic-release/git"
-    ],
-    "branches": [
-      "master",
-      "next",
-      "/^feature.*$/"
     ]
   }
 }
