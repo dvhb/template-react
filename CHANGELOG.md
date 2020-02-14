@@ -1,3 +1,10 @@
+# [1.5.0-with-styled-components.1](https://github.com/dvhb/template-react/compare/v1.4.4...v1.5.0-with-styled-components.1) (2020-02-14)
+
+
+### Features
+
+* set up styled-components with theme ([1c31f99](https://github.com/dvhb/template-react/commit/1c31f999d9c46ce7cfa85889914140048c9eb463))
+
 ## [1.4.4](https://github.com/dvhb/template-react/compare/v1.4.3...v1.4.4) (2020-02-14)
 
 
