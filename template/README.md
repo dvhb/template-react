@@ -10,3 +10,4 @@
 - react `16.12.0`
 - typescript `3.7.2`
 - storybook `5.3.12`
+- styled-components `5.0.1`
