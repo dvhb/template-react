@@ -27,7 +27,7 @@
     "lint:template": "cd template && npm run tsc && npm run lint",
     "presemantic-release": "cd template && rm -rf package.json",
     "semantic-release": "semantic-release",
-    "test": "cd template && npm i && npm run tsc && npm run lint && cp .env.example .env && npm run build "
+    "test": "cd template && npm i && npm run tsc && npm run lint && cp .env.example .env && SKIP_PREFLIGHT_CHECK=true npm run build "
   },
   "husky": {
     "hooks": {
