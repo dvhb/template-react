@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/dvhb/template-react/compare/v1.4.3...v1.4.4) (2020-02-14)
+
+
+### Bug Fixes
+
+* add commitlint and lint-staged ([63d4b5a](https://github.com/dvhb/template-react/commit/63d4b5a290eb182fc7f23b880c381aedbcd3dae3))
+
 ## [1.4.3](https://github.com/dvhb/template-react/compare/v1.4.2...v1.4.3) (2020-02-07)
 
 
