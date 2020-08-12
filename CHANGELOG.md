@@ -1,3 +1,16 @@
+# [1.5.0](https://github.com/dvhb/template-react/compare/v1.4.4...v1.5.0) (2020-08-12)
+
+
+### Bug Fixes
+
+* **ci:** cypress ([c0cf646](https://github.com/dvhb/template-react/commit/c0cf646983b0d3a1e8218369f08a81c0bf3ae6ab))
+* **ci:** cypress ([36b6a77](https://github.com/dvhb/template-react/commit/36b6a7751f1d2a3f0e39ddb9e4a195edf021de3d))
+
+
+### Features
+
+* add cypress ([fc8e003](https://github.com/dvhb/template-react/commit/fc8e00340da1584ee3d6ae910cf7ffccbbfa63c5))
+
 ## [1.4.4](https://github.com/dvhb/template-react/compare/v1.4.3...v1.4.4) (2020-02-14)
 
 
