@@ -13,7 +13,7 @@
 
 ## E2E tests
 
-To run e2e tests use the following commands (tests will be launched in the dev environment):
+To run e2e tests use the following commands (tests will be launched in the local environment):
 
 - with ui: `npm run test:cypress:open`
 - headless: `npm run test:cypress:ci`
