@@ -1,11 +1,11 @@
 const path = require('path');
+const cracoStylus = require('./craco-stylus');
 
 module.exports = {
-  babel: {
-  },
+  babel: {},
   typescript: {
     enableTypeChecking: false,
   },
-  devServer: {
-  },
+  plugins: [{ plugin: cracoStylus }],
+  devServer: {},
 };

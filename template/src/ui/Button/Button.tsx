@@ -1,7 +1,8 @@
 import React, { ReactNode } from 'react';
 import cn from 'classnames';
 
-import styles from './styles.module.scss';
+// import styles from './styles.module.scss';
+import './test.styl';
 
 type Props = {
   children?: ReactNode;
@@ -14,17 +15,7 @@ type Props = {
 
 export function Button({ children, size, variant, block, className, ...props }: Props) {
   return (
-    <button
-      type="button"
-      className={cn(
-        styles.button,
-        variant && styles[`button_${variant}`],
-        size === 'lg' && styles.buttonLg,
-        block && styles.buttonBlock,
-        className && className,
-      )}
-      {...props}
-    >
+    <button type="button" className={cn('button-stylus')} {...props}>
       {children}
     </button>
   );
