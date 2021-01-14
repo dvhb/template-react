@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import cn from 'classnames';
 
 import styles from './styles.module.scss';
 
-type Props = {};
+export type PageProps = {};
 
-export function Page({ ...props }: Props) {
-  return <div className={cn(styles.myComponent)} {...props} />;
-}
+export const Page: FC<PageProps> = ({ ...props }) => {
+  return <div className={cn(styles.container)} {...props} />;
+};

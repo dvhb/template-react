@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import cn from 'classnames';
 
 import styles from './styles.module.scss';
 
-type Props = {};
+export type MyComponentProps = {
+  onClick?: () => void;
+};
 
-export function MyComponent({ ...props }: Props) {
-  return <div className={cn(styles.myComponent)} {...props} />;
-}
+export const MyComponent: FC<MyComponentProps> = props => {
+  return <div className={cn(styles.container)} {...props} />;
+};

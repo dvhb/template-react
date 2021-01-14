@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React, { FC, ReactNode } from 'react';
 import cn from 'classnames';
 
 import styles from './styles.module.scss';
 
-type Props = {
+export type ButtonProps = {
   children?: ReactNode;
   variant?: 'unstyled' | 'asLink' | 'black' | 'borderedBlack' | 'whiteBorderedBlack';
   size?: 'lg';
@@ -12,7 +12,7 @@ type Props = {
   className?: string;
 };
 
-export function Button({ children, size, variant, block, className, ...props }: Props) {
+export const Button: FC<ButtonProps> = ({ children, size, variant, block, className, ...props }) => {
   return (
     <button
       type="button"
@@ -28,4 +28,4 @@ export function Button({ children, size, variant, block, className, ...props }: 
       {children}
     </button>
   );
-}
+};

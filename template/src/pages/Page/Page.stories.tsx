@@ -1,8 +1,10 @@
 import React from 'react';
-import { Page } from './Page';
+import { Page, PageProps } from './Page';
 
 export default {
   title: 'Pages/Page',
 };
 
-export const Default = () => <Page />;
+const props: PageProps = {};
+
+export const Default = () => <Page {...props}>Page</Page>;
