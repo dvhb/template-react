@@ -1,8 +1,14 @@
 import React from 'react';
-import { MyComponent } from './MyComponent';
+import { action } from '@storybook/addon-actions';
+
+import { MyComponent, MyComponentProps } from './MyComponent';
 
 export default {
   title: 'Components/MyComponent',
 };
 
-export const Default = () => <MyComponent />;
+const props: MyComponentProps = {
+  onClick: action('onClick'),
+};
+
+export const Default = () => <MyComponent {...props}>My component</MyComponent>;
