@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 import { routes } from '../../routes';
-import { history, store } from '../../store';
+import { history, persistor, store } from '../../store';
 import { Provider } from '../Provider';
 import { PageContainer } from '../../pages';
 import { DvhbUiProvider, GlobalStyle } from '../../theme';
@@ -13,7 +13,7 @@ type Props = {};
 
 export const App: FC<Props> = () => (
   <DvhbUiProvider>
-    <Provider store={store} history={history}>
+    <Provider store={store} history={history} persistor={persistor}>
       <GlobalStyle />
       <Switch>
         <Route private path={routes.index} exact>

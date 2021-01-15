@@ -5,6 +5,8 @@
   "scripts": {
     "build": "craco build",
     "eject": "react-scripts eject",
+    "pregenerate:api": "curl https://petstore.swagger.io/v2/swagger.json > swagger/api-schema.yaml",
+    "generate:api": "rimraf src/api/** && openapi-generator-cli generate -i swagger/api-schema.yaml -g typescript-fetch --model-name-prefix I -o ./src/api -p modelPropertyNaming=original",
     "icons": "npx @svgr/cli -d src/ui/Icon/components src/ui/Icon/src --icon --ext tsx --template src/ui/Icon/template.js",
     "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
     "start": "craco start --verbose",
@@ -45,6 +47,7 @@
     "@craco/craco": "^5.9.0",
     "@dvhb/tslint-config-react": "^1.0.9",
     "@dvhb/ui": "^1.1.0-beta.105",
+    "@openapitools/openapi-generator-cli": "^2.1.17",
     "@storybook/addon-actions": "^6.1.9",
     "@storybook/addon-knobs": "^6.1.9",
     "@storybook/addon-links": "^6.1.9",
