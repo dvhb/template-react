@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 import { DatepickerProps as UIDatepickerProps } from '@dvhb/ui';
 
 // import used locales
-// import 'moment/locale/ru';
+import 'moment/locale/ru';
 
 import { Theme, useTheme } from '../../theme';
 import { useWindowSize } from '../../utils';
