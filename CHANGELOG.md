@@ -1,3 +1,15 @@
+# [1.6.0](https://github.com/dvhb/template-react/compare/v1.5.0...v1.6.0) (2021-01-15)
+
+
+### Bug Fixes
+
+* lint errors ([caf993a](https://github.com/dvhb/template-react/commit/caf993ab098dacd69d9d163719383fd29adef803))
+
+
+### Features
+
+* dvhb/ui theme with styled ([cc79b4c](https://github.com/dvhb/template-react/commit/cc79b4c5d47dabf4b3b698b4cd2842cf745a23c3))
+
 # [1.5.0](https://github.com/dvhb/template-react/compare/v1.4.4...v1.5.0) (2020-08-12)
 
 
