@@ -24,7 +24,7 @@ type OptionType = {
 
 const prepareMonthOptions = (arr: number[]) =>
   arr.map((i, index) => ({ label: i.toString(), value: index.toString() }));
-const prepareYearOptions = (arr: number[]) => arr.map(i => ({ label: i.toString(), value: i.toString() }));
+const prepareYearOptions = (arr: number[]) => arr.map((i) => ({ label: i.toString(), value: i.toString() }));
 
 export const YearMonthForm = ({
   date,
