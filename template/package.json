@@ -5,14 +5,17 @@
   "scripts": {
     "build": "craco build",
     "eject": "react-scripts eject",
+    "icons": "npx @svgr/cli -d src/ui/Icon/components src/ui/Icon/src --icon --ext tsx --template src/ui/Icon/template.js",
     "lint": "tslint -p tsconfig.json -c tslint.json -t verbose",
     "start": "craco start --verbose",
     "storybook": "start-storybook -p 9009 -s public",
     "storybook:build": "build-storybook -o build/storybook -s public",
     "test": "craco test",
-    "test:cypress:open": "node tools/cypress/cypress-open.js",
     "test:cypress:ci": "node tools/cypress/cypress-ci.js",
-    "tsc": "tsc"
+    "test:cypress:open": "node tools/cypress/cypress-open.js",
+    "tsc": "tsc",
+    "yalc:dvhb/ui:install": "npm un @dvhb/ui && yalc add @dvhb/ui && npm i",
+    "yalc:dvhb/ui:uninstall": "npm un @dvhb/ui && npm i @dvhb/ui@beta"
   },
   "husky": {
     "hooks": {
@@ -36,11 +39,14 @@
     "extends": "react-app"
   },
   "dependencies": {
+    "@callstack/react-theme-provider": "^2.1.0",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "@craco/craco": "^5.9.0",
     "@dvhb/tslint-config-react": "^1.0.9",
+    "@dvhb/ui": "^1.1.0-beta.105",
     "@storybook/addon-actions": "^6.1.9",
+    "@storybook/addon-knobs": "^6.1.9",
     "@storybook/addon-links": "^6.1.9",
     "@storybook/addons": "^6.1.9",
     "@storybook/preset-create-react-app": "^3.1.5",
@@ -53,15 +59,22 @@
     "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.7",
     "classnames": "^2.2.6",
     "cypress": "^4.10.0",
+    "final-form": "^4.20.1",
     "husky": "^4.2.1",
     "lint-staged": "^10.0.7",
     "node-sass": "^4.13.1",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
+    "react-device-detect": "^1.15.0",
     "react-dom": "^17.0.1",
+    "react-final-form": "^6.5.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
+    "styled-components": "^5.2.1",
     "tslint": "^6.1.3",
     "typescript": "^4.0.3"
   }

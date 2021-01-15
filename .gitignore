@@ -13,3 +13,5 @@ template/.env
 template/build
 template/package-lock.json
 template/.eslintcache
+template/.yalc
+template/yalc.lock
