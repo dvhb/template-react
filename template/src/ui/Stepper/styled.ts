@@ -14,17 +14,17 @@ export const StyledCounter = styled.div<StepperStepComponentProps & Theme>`
   font-size: 16px;
   color: #767a83;
 
-  ${p =>
+  ${(p) =>
     p.active &&
     css`
-      background-color: ${p => p.theme?.primaryColor};
+      background-color: ${(p) => p.theme?.primaryColor};
       color: #fff;
     `}
 
-  ${p =>
+  ${(p) =>
     p.completed &&
     css`
-      background-color: ${p => p.theme?.secondaryColor};
+      background-color: ${(p) => p.theme?.secondaryColor};
       color: #fff;
     `}
 `;
@@ -33,7 +33,7 @@ export const StyledArrow = styled.div<StepperStepComponentProps & Theme>`
   margin-left: 12px;
   opacity: 0.5;
 
-  ${p =>
+  ${(p) =>
     p.completed &&
     css`
       opacity: 1;
@@ -50,13 +50,13 @@ export const StyledTitle = styled.div<StepperStepComponentProps & Theme>`
   }
   opacity: 0.7;
 
-  ${p =>
+  ${(p) =>
     p.completed &&
     css`
       opacity: 1;
     `}
 
-  ${p =>
+  ${(p) =>
     p.active &&
     css`
       opacity: 1;
@@ -70,7 +70,7 @@ export const StyledStep = styled.div<StepperStepComponentProps>`
     margin-left: 16px;
   }
 
-  ${p =>
+  ${(p) =>
     p.completed &&
     css`
       cursor: pointer;

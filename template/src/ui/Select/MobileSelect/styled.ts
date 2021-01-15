@@ -22,18 +22,18 @@ export const StyledControl = styled('div')<Theme & any>`
   margin: 0 20px;
   flex: none;
 
-  border-color: ${p =>
+  border-color: ${(p) =>
     (p.selectProps.error ? p.theme?.input?.borderColorError : p.theme?.input?.borderColor) || '#B2B6BE'};
-  border-radius: ${p => p.theme?.input?.borderRadius || '4px'};
-  min-height: ${p => p.theme?.input?.height || '40px'};
-  background-color: ${p => p.theme?.input?.backgroundColor};
-  font-family: ${p => p.theme?.fontFamily};
-  font-size: ${p => p.theme?.input?.fontSize};
+  border-radius: ${(p) => p.theme?.input?.borderRadius || '4px'};
+  min-height: ${(p) => p.theme?.input?.height || '40px'};
+  background-color: ${(p) => p.theme?.input?.backgroundColor};
+  font-family: ${(p) => p.theme?.fontFamily};
+  font-size: ${(p) => p.theme?.input?.fontSize};
 `;
 
 export const StyledOption = styled('div')<Theme>`
-  color: ${p => p.theme?.primaryColor};
-  font-size: ${p => p.theme?.input?.fontSize};
+  color: ${(p) => p.theme?.primaryColor};
+  font-size: ${(p) => p.theme?.input?.fontSize};
   padding: 12px 20px;
   cursor: pointer;
   line-height: 24px;

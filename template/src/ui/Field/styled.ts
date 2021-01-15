@@ -8,12 +8,12 @@ export const StyledTextHelper = styled(Text)<TextProps & Pick<FieldProps, 'error
   && {
     max-width: 550px;
 
-    ${p =>
+    ${(p) =>
       p.error &&
       css`
-        color: ${p => p.theme.errorColor};
+        color: ${(p) => p.theme.errorColor};
       `}
-    ${p =>
+    ${(p) =>
       p.descriptionLeftPadding &&
       css`
         padding-left: 32px;

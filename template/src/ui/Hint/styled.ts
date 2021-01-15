@@ -4,7 +4,7 @@ import { Theme } from '../../theme';
 import { Hint } from '@dvhb/ui';
 
 export const StyledIcon = styled.div<Theme>`
-  color: ${p => p.theme.secondaryColor};
+  color: ${(p) => p.theme.secondaryColor};
   display: flex;
   font-size: 16px;
 `;
@@ -43,5 +43,5 @@ export const StyledClose = styled.div`
   position: absolute;
   top: 12px;
   right: 8px;
-  color: ${p => p.theme.secondaryColor};
+  color: ${(p) => p.theme.secondaryColor};
 `;

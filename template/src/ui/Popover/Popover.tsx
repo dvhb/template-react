@@ -63,14 +63,14 @@ export const Popover = styled(PopoverPure)<PopoverProps>`
       right: 20px !important;
     }
 
-    ${p =>
+    ${(p) =>
       p.onClickClose &&
       css`
         padding-left: 28px;
         padding-right: 32px;
       `}
 
-    ${p =>
+    ${(p) =>
       p.type === 'black' &&
       css`
         background: #3b3e45;

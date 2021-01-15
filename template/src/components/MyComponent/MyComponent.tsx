@@ -7,6 +7,6 @@ export type MyComponentProps = {
   onClick?: () => void;
 };
 
-export const MyComponent: FC<MyComponentProps> = props => {
+export const MyComponent: FC<MyComponentProps> = (props) => {
   return <div className={cn(styles.container)} {...props} />;
 };

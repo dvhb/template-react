@@ -13,8 +13,10 @@ export const Checkbox = ({ ...rest }: CheckboxProps) => {
       theme={theme}
       {...rest}
       components={{
-        CheckboxControl: props => <StyledCheckboxControl theme={theme} data-cy={(rest as any)['data-cy']} {...props} />,
-        Label: props => <StyledLabel {...props} />,
+        CheckboxControl: (props) => (
+          <StyledCheckboxControl theme={theme} data-cy={(rest as any)['data-cy']} {...props} />
+        ),
+        Label: (props) => <StyledLabel {...props} />,
       }}
     />
   );

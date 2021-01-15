@@ -38,7 +38,7 @@ export const Field: FC<FieldProps> = ({ descriptionLeftPadding, label, ...rest }
       {rest.error && <div id={'error'} />}
       <FieldStyled
         theme={theme}
-        components={{ TextHelper, Label, Hint: props => <Hint mobileTitle={label} {...props} /> }}
+        components={{ TextHelper, Label, Hint: (props) => <Hint mobileTitle={label} {...props} /> }}
         label={label}
         {...rest}
       />

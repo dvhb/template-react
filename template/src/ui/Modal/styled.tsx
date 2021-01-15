@@ -26,8 +26,8 @@ export const StyledCloseButton = styled(Button)<Theme>`
   z-index: 10;
 `;
 
-export const StyledCloseButtonText = styled(props => <Text tag="div" size="inherit" textColor="grey" {...props} />)<
-  Theme
->`
+export const StyledCloseButtonText = styled((props) => (
+  <Text tag="div" size="inherit" textColor="grey" {...props} />
+))<Theme>`
   display: flex;
 `;

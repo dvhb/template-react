@@ -13,22 +13,22 @@ export const StyledControl = styled('div')<Theme & any>`
   border-width: 1px;
   border-style: solid;
 
-  border-color: ${p =>
+  border-color: ${(p) =>
     (p.selectProps.error ? p.theme?.input?.borderColorError : p.theme?.input?.borderColor) || '#B2B6BE'};
-  border-radius: ${p => p.theme?.input?.borderRadius || '4px'};
-  min-height: ${p => p.theme?.input?.height || '40px'};
-  background-color: ${p => p.theme?.input?.backgroundColor};
-  font-family: ${p => p.theme?.fontFamily};
-  font-size: ${p => p.theme?.input?.fontSize};
+  border-radius: ${(p) => p.theme?.input?.borderRadius || '4px'};
+  min-height: ${(p) => p.theme?.input?.height || '40px'};
+  background-color: ${(p) => p.theme?.input?.backgroundColor};
+  font-family: ${(p) => p.theme?.fontFamily};
+  font-size: ${(p) => p.theme?.input?.fontSize};
 
-  ${p =>
+  ${(p) =>
     p.menuIsOpen &&
     css`
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     `}
 
-  ${p =>
+  ${(p) =>
     p.size === 'sm' &&
     css`
       min-height: 28px;
@@ -37,7 +37,7 @@ export const StyledControl = styled('div')<Theme & any>`
 `;
 
 export const StyledDropdownIndicator = styled('div')<Theme>`
-  color: ${p => p.theme?.primaryColor};
+  color: ${(p) => p.theme?.primaryColor};
   transform: rotate(90deg);
   margin-right: 8px;
   pointer-events: none;
@@ -53,29 +53,29 @@ export const StyledMultiValueContainer = styled('div')<Theme>`
 `;
 
 export const StyledMultiValueLabel = styled('div')<Theme>`
-  font-size: ${p => p.theme?.input?.fontSize};
+  font-size: ${(p) => p.theme?.input?.fontSize};
   color: #fff;
   line-height: 36px;
   padding: 0 4px 0 10px;
 `;
 
 export const StyledMultiValueRemove = styled('div')<Theme>`
-  color: ${p => p.theme?.secondaryColor};
+  color: ${(p) => p.theme?.secondaryColor};
   align-items: center;
   display: flex;
   padding-right: 4px;
   cursor: pointer;
 
   &&:hover {
-    color: ${p => p.theme?.secondaryColor};
+    color: ${(p) => p.theme?.secondaryColor};
     opacity: 0.8;
     background-color: transparent;
   }
 `;
 
 export const StyledOption = styled('div')<Theme>`
-  color: ${p => p.theme?.primaryColor};
-  font-size: ${p => p.theme?.input?.fontSize};
+  color: ${(p) => p.theme?.primaryColor};
+  font-size: ${(p) => p.theme?.input?.fontSize};
   padding: 8px 12px;
   cursor: pointer;
 `;
@@ -91,7 +91,7 @@ export const StyledMenu = styled.div`
 `;
 
 export const StyledSelectContainer = styled.div<any>`
-  ${p =>
+  ${(p) =>
     p.selectProps.menuIsOpen &&
     css`
       transform: translate3d(0, 0, 0);

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledRadio = styled.div`
-  color: ${p => p.theme.primaryColor};
+  color: ${(p) => p.theme.primaryColor};
 `;
 
 export const StyledLabelWrapper = styled.div`

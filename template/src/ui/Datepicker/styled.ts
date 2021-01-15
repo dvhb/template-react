@@ -36,9 +36,9 @@ type StyledArrowProps = {
 };
 
 export const StyledArrow = styled.div<StyledArrowProps>`
-  color: ${p => p.theme.primaryColor};
+  color: ${(p) => p.theme.primaryColor};
 
-  ${p =>
+  ${(p) =>
     p.withSelectInHeader &&
     css`
       top: 20px;
@@ -50,7 +50,7 @@ type StyledPickerWrapperProps = {
 };
 
 export const StyledPickerWrapper = styled.div<StyledPickerWrapperProps>`
-  ${p =>
+  ${(p) =>
     p.pickerIsFocused &&
     css`
       filter: drop-shadow(0px 4px 10px rgba(21, 23, 27, 0.1));

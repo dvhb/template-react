@@ -8,7 +8,7 @@ type DatepickerBirthdayProps = {} & DatepickerProps;
 
 export const DatepickerBirthday = ({ dayPickerProps, ...rest }: DatepickerBirthdayProps) => {
   const [month, setMonth] = useState(dayPickerProps?.toMonth ?? toCurrentMonth);
-  const handleYearMonthChange = useCallback(m => setMonth(m), []);
+  const handleYearMonthChange = useCallback((m) => setMonth(m), []);
 
   // @ts-ignore
   const CaptionElement = ({ date, localeUtils, locale }) => (

@@ -17,19 +17,19 @@ const ButtonStyled = styled(({ ...rest }) => <UIButton {...rest} />)<ButtonProps
     p.type !== 'unstyled' &&
     p.type !== 'asLink' &&
     css`
-      background-color: ${p => p.theme?.button?.backgroundColor || p.theme?.primaryColor};
-      color: ${p => p.theme?.button?.color};
-      font-size: ${p => p.theme?.button?.fontSize};
-      font-weight: ${p => p.theme?.button?.fontWeight};
-      border-radius: ${p => p.theme?.button?.borderRadius};
-      box-shadow: ${p => p.theme?.button?.boxShadow};
-      height: ${p => p.theme?.button?.height};
-      min-width: ${p => p.theme?.button?.minWidth};
+      background-color: ${(p) => p.theme?.button?.backgroundColor || p.theme?.primaryColor};
+      color: ${(p) => p.theme?.button?.color};
+      font-size: ${(p) => p.theme?.button?.fontSize};
+      font-weight: ${(p) => p.theme?.button?.fontWeight};
+      border-radius: ${(p) => p.theme?.button?.borderRadius};
+      box-shadow: ${(p) => p.theme?.button?.boxShadow};
+      height: ${(p) => p.theme?.button?.height};
+      min-width: ${(p) => p.theme?.button?.minWidth};
       text-transform: uppercase;
       transition: opacity 0.6s ease;
 
       &:hover {
-        background-color: ${p => p.theme?.button?.onHoverBackgroundColor || p.theme?.button?.backgroundColor};
+        background-color: ${(p) => p.theme?.button?.onHoverBackgroundColor || p.theme?.button?.backgroundColor};
         opacity: 0.8;
       }
 
@@ -39,14 +39,14 @@ const ButtonStyled = styled(({ ...rest }) => <UIButton {...rest} />)<ButtonProps
       }
     `}
 
-  ${p =>
+  ${(p) =>
     p.type === 'asLink' &&
     css`
       && {
         background-color: transparent;
-        color: ${p => p.theme?.primaryColor};
+        color: ${(p) => p.theme?.primaryColor};
         font-size: 10px;
-        font-weight: ${p => p.theme?.button?.fontWeight};
+        font-weight: ${(p) => p.theme?.button?.fontWeight};
         border-radius: 0;
         box-shadow: none;
         height: auto;
@@ -58,35 +58,35 @@ const ButtonStyled = styled(({ ...rest }) => <UIButton {...rest} />)<ButtonProps
 
         &:hover {
           background-color: transparent;
-          color: ${p => p.theme?.primaryColor};
+          color: ${(p) => p.theme?.primaryColor};
           opacity: 0.7;
         }
       }
     `}
   
-  ${p =>
+  ${(p) =>
     p.type === 'secondary' &&
     css`
-      background-color: ${p => p.theme?.button?.secondary?.backgroundColor};
-      color: ${p => p.theme?.button?.secondary?.color};
+      background-color: ${(p) => p.theme?.button?.secondary?.backgroundColor};
+      color: ${(p) => p.theme?.button?.secondary?.color};
     `}
     
-  ${p =>
+  ${(p) =>
     p.type === 'outline' &&
     css`
-      background-color: ${p => p.theme?.button?.outline?.backgroundColor};
-      color: ${p => p.theme?.button?.outline?.color};
-      border-color: ${p => p.theme?.button?.outline?.borderColor};
-      border-width: ${p => p.theme?.button?.outline?.borderWidth};
+      background-color: ${(p) => p.theme?.button?.outline?.backgroundColor};
+      color: ${(p) => p.theme?.button?.outline?.color};
+      border-color: ${(p) => p.theme?.button?.outline?.borderColor};
+      border-width: ${(p) => p.theme?.button?.outline?.borderWidth};
       box-shadow: none;
       border: solid;
     `}
     
-  ${p =>
+  ${(p) =>
     p.block &&
     css`
       min-width: 0;
-    `}  
+    `}
 `;
 
 export const Button: FC<ButtonProps> = ({ ...rest }) => {

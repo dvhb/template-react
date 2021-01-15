@@ -14,7 +14,7 @@ export const StyledListItem = styled(Text)<Theme>`
   &:before {
     content: '—';
     position: absolute;
-    color: ${p => p.theme.primaryColor};
+    color: ${(p) => p.theme.primaryColor};
     left: 0;
     top: 0;
     width: 32px;
