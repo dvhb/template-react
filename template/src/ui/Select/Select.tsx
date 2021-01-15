@@ -25,8 +25,6 @@ export type SelectProps = {
   fieldOptions?: Pick<FieldProps, 'label' | 'labelHint' | 'description'>;
 } & UISelectProps;
 
-const Input = ({ innerRef, ...innerProps }: any) => <defaultComponents.Input ref={innerRef} {...innerProps} />;
-
 export const Select = ({
   components,
   size,
@@ -54,7 +52,7 @@ export const Select = ({
     ({ cx, ...props }: any) => (
       <StyledControl size={size} {...props} {...props.innerProps} theme={theme} onTouchEnd={stopPropagation} />
     ),
-    [],
+    [size, theme],
   );
   const DropdownIndicator = ({ cx, ...props }: any) => (
     <StyledDropdownIndicator theme={theme} {...props.innerProps}>
@@ -84,25 +82,28 @@ export const Select = ({
 
   const SelectContainer = useCallback(
     ({ cx, ...props }: any) => <StyledSelectContainer {...props} {...props.innerProps} data-cy={rest.dataCy} />,
-    [],
+    [rest.dataCy],
   );
   const NoOptionsMessage = (props: any) => (
     <defaultComponents.NoOptionsMessage {...props}>No data</defaultComponents.NoOptionsMessage>
   );
 
-  const handleOnChange = useCallback((value: any, action: any) => {
-    onChange?.(value, action);
-    if (!isMulti) handleModalClose();
-  }, []);
-
   const handleOnMenuOpen = useCallback(() => {
     setModalIsOpen(true);
     onMenuOpen?.();
-  }, []);
+  }, [setModalIsOpen, onMenuOpen]);
 
   const handleModalClose = useCallback(() => {
     setModalIsOpen(false);
-  }, []);
+  }, [setModalIsOpen]);
+
+  const handleOnChange = useCallback(
+    (value: any, action: any) => {
+      onChange?.(value, action);
+      if (!isMulti) handleModalClose();
+    },
+    [handleModalClose, isMulti, onChange],
+  );
 
   return (
     <>

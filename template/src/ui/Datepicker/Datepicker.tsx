@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react';
 import { DatepickerProps as UIDatepickerProps } from '@dvhb/ui';
-import 'moment/locale/ru';
+
+// import used locales
+// import 'moment/locale/ru';
 
 import { Theme, useTheme } from '../../theme';
 import { useWindowSize } from '../../utils';
@@ -49,7 +51,7 @@ export const Datepicker = ({
   const [pickerIsFocused, setPickerIsFocused] = useState(false);
   const { width } = useWindowSize();
 
-  const handlePickerShow = async () => {
+  const handlePickerShow = useCallback(async () => {
     // close popover when picker menu is open
     document.body.click();
     const topPoint = inputRef.current && inputRef.current.getBoundingClientRect().top;
@@ -65,7 +67,7 @@ export const Datepicker = ({
         });
       }, 150);
     }
-  };
+  }, [setPickerIsFocused, inputRef, width]);
   const handlePickerHide = useCallback(() => {
     // Without setTimeout it sets focus back to input and breaks navigation with Tab key
     setTimeout(() => setPickerIsFocused(false), 50);
@@ -73,7 +75,7 @@ export const Datepicker = ({
 
   const handleIconClick = useCallback(() => {
     !pickerIsFocused && handlePickerShow();
-  }, [pickerIsFocused]);
+  }, [pickerIsFocused, handlePickerShow]);
 
   const CustomInputComponent = useCallback(
     (props: any) => (
@@ -87,7 +89,7 @@ export const Datepicker = ({
         {...props}
       />
     ),
-    [],
+    [handleIconClick, pickerIsFocused],
   );
 
   return (
